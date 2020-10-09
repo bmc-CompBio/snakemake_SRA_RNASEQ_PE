@@ -38,6 +38,9 @@ with 16 cores
 snakemake --cores 16
 ```
 ### on the cluster
+
+execution has to be started on master node as internet connection is needed for genome downlaod and SRA access.
+
 ```
 snakemake -j 999 --cluster-config cluster.json --cluster "sbatch -p {cluster.partition} -n {cluster.n} --mem {cluster.mem}"
 ````
